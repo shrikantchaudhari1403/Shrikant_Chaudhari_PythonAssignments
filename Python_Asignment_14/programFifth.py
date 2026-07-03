@@ -7,9 +7,9 @@ def main():
     result= checkEven(num1)
 
     if result:
-        print("The number is Even")
+        print("The number is Even:", result)
     else:
-        print("The number is Odd")    
+        print("The number is Even:", result)
 
 if __name__ == "__main__":
     main()

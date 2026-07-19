@@ -1,0 +1,5 @@
+my name is shrikant chaudhari
+i am quick learner
+i like to learn new things 
+this program counts the number of lines in the file 
+answer should nbe  5

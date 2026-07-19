@@ -1,0 +1,147 @@
+1. What is Object Oriented Programming?
+Ans: Object Oriented programming is thinking in terms of object 
+     for the given problem statement think in terms of object 
+
+     it has four concepts 
+     1. Encapsulation 2. Abstraction 3. Inheritance 4. Polymirphism 
+
+2. What are four core charachristic of operations
+Ans: 1. Encapsulation - Binding method and variables together is called as Encapsulation
+     2. Abstraction- Hiding something form outside world 
+     3. Polymorphism -  Single name and multiple hehaviour 
+     4. Inheritance- it is mechanisum to use reusability of code 
+
+3. Explain class and object in real world analogy
+Ans: A class is a blueprint or template, like a house floor plan,
+     that defines the general properties and behaviors of an entity. 
+      An object is the actual, tangible thing created from that blueprint—like
+       the physical house itself, which has specific, real-world data (paint color, furniture)
+
+4. What is constructor in python ? why __init__ is used in python ?
+Ans:  __init__ is reserved method in python it is called as constructor
+      it is used to initialse the attribute of the class
+      when object of class created it gets called automatically
+
+5. Is the contructor mandatory in python class ?
+Ans: No, a constructor is not mandatory in a Python class.
+     A constructor is a special method named __init__().
+     It is called automatically whenever an object of the class is created.
+
+
+        Syntax:
+
+        class Demo:
+            def __init__(self):
+                print("Constructor called")
+
+        When you create an object:
+
+        obj = Demo()
+
+        Output:
+
+        Constructor called
+
+6. What is destructor ? when  __del__()  it get called ?        
+Ans: A destructor is a special method in Python named __del__(). It is called when an object is about to be destroyed (garbage collected),
+    usually when there are no more references to it. 
+
+7. What is difference between constructor and descructor ?
+Ans : 1. Constructor is Called automatically when an object is created. Destrcutor is Called automatically when an object is about to be destroyed.    
+      2. Constructor Used to initialize the object's data (instance variables) Destructor Used to perform cleanup before the object is removed from memory.
+      3. Constructor Executes immediately after obj = ClassName(). Desctructor Executes when the object's last reference is removed or during garbage collection. 
+
+
+8. What are instance and class variables in python ?
+Ans: Instance variables and class variables are two types of variables used in Python classes. This is one of the most important OOP concepts
+  eg 
+        class Student:
+            school= "vidya niketan"
+            def __init__(self, name, age):
+                self.name = name      # Instance Variable
+                self.age = age        # Instance Variable
+
+        s1 = Student("Rahul", 20)
+        s2 = Student("Priya", 22)
+
+        print(s1.name, s1.age)
+        print(s2.name, s2.age)
+
+output- Rahul 20
+        Priya 22
+
+        A class variable belongs to the class itself. It is shared by all objects.
+        eg- school
+
+9. Explain Instance method, static method and class method in python ?
+Ans=>       
+  1. An instance method works with instance variables. It takes self as its first parameter.
+        First parameter is self.
+        Can access and modify instance variables.
+        Called using an object.
+      class Student:
+
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+
+    def display(self):      # Instance Method
+        print("Name:", self.name)
+        print("Marks:", self.marks)
+
+    s1 = Student("Rahul", 85)
+    s1.display()
+
+    Output
+
+    Name: Rahul
+    Marks: 85
+
+    b. A class method works with class variables instead of instance variables.
+       It uses the @classmethod decorator and receives cls (the class itself) as its first parameter
+        
+    Decorated with @classmethod.
+    First parameter is cls.
+    Accesses or modifies class variables.
+    Can be called using either the class or an object.
+    eg.
+      class Student:
+
+    school = "ABC School"
+
+    @classmethod
+    def show_school(cls):
+        print("School:", cls.school)
+
+        Student.show_school()
+
+        Output
+
+        School: ABC School
+
+    c. 3. Static Method
+       A static method does not use instance variables (self) or class variables (cls).
+       It is just a regular function placed inside a class because it is logically related to that class.
+       It uses the @staticmethod decorator.
+
+       Decorated with @staticmethod.
+       No self.
+       No cls.
+       Cannot directly access instance or class variables.
+
+       eg:
+       class Calculator:
+
+    @staticmethod
+    def add(a, b):
+        return a + b
+
+    print(Calculator.add(10, 20))
+
+    Output
+
+    30
+
+10. Why we use @classmethod @staticmethod decotator to class ?
+Ans-  The decorators @classmethod and @staticmethod tell Python how a method should behave. 
+      Without these decorators, Python treats methods as instance methods by default    

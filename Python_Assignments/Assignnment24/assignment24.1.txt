@@ -1,0 +1,90 @@
+1.what is lambda function in python ? how it is different from normal function?
+Answer=> Lambda functions are anonymous(function without name) functions in python
+  they are used to create small throaways functions without formally defining them with def keyword
+
+  syntax:
+  lambda arguments: expression
+
+2. Limitation of lambda functions?
+Ans=> lambda functions are inline functions, for complex operations we can not use them 
+
+3. Explain Working of Map Function with example ?
+Ans=> Applies function to each element in an iterable and returns new sequence 
+
+     syntax : map(function,iterable)
+     eg- 
+
+       numbers= [1,2,3,4,5,6,7]
+ 
+      oddNnumbers= list(filter(lambda x:x % 2 !=0, numbers))
+      print(oddNumbers)  # 1,3,5,7
+
+4. How map function differ from using map function?
+Ans=> map() is a functional programming tool designed specifically to transform data,
+       whereas a for loop is a general-purpose control flow statement used to execute
+        any block of code repeatedly.
+
+5. What is filter function and when it should be use ?
+Ans=> Filter functions in python filters the sequesce of element based on condition given   
+    syntax : filter(function, iterable)
+               function - that return true or false
+               iterable - list,tuple
+
+6. Difference between map and filter?
+   Map transforms every element in the iterable where filter selectively filters the element which satisfy the given condition 
+
+   Map - Trasform element, returns modified value
+   Filter- Extract element, return boolen value if meet condition 
+
+7. What is reduce() ? why it is not built-in function in python?
+Ans=> Applies the function to reduce the iterable to single value 
+
+    from funtools import reduce
+      reduce(function, iterable)
+
+      It is not a built-in function in Python 3 because Python's creator,
+      Guido van Rossum, believed it harms code readability and that explicit loops
+      or specialized built-in functions (like sum()) are cleaner and more "Pythonic"
+
+8. Explain how reduce works internaly ?
+Ans=> Instead of processing items individually, reduce() combines them step-by-step.
+      It passes the first two elements of an iterable into a function, takes that result,
+      pairs it with the third element, and continues this rolling computation until only one value remains.
+
+      from functools import reduce
+
+      numbers = [1, 2, 3, 4]
+      # Multiplies: ((1 * 2) * 3) * 4
+      product = reduce(lambda x, y: x * y, numbers)
+
+      print(product)  # Output: 24
+      
+9. Can lambda function be used with filter, map reduce altogether ? explain with example
+Ans=>  Yes, you can absolutely use lambda functions together with map(), filter(), and reduce() in Python.
+  1. filter() first narrows down the data.
+  2. map() transforms the remaining data
+  3. reduce() aggregates the transformed data into a single final result.
+
+1. Keep only the even numbers (Filter).
+2. Square those even numbers (Map).
+3. Add them all together to get a single sum (Reduce).
+
+pythonfrom functools import reduce
+# Original list of numbers
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# 1. Filter: Keep only even numbers (x % 2 == 0)
+evens = filter(lambda x: x % 2 == 0, numbers)
+
+# 2. Map: Square the filtered numbers (x ** 2)
+squares = map(lambda x: x ** 2, evens)
+
+# 3. Reduce: Add all squared numbers together (x + y)
+total_sum = reduce(lambda x, y: x + y, squares)
+
+print(total_sum) # Output: 220
+
+10 When the functional programming prefered over the procedural in python ?
+Ans=>  In Python, functional programming (FP) is preferred over procedural programming
+ when your application requires strict data integrity, heavy data transformations,
+concurrency, or high testability

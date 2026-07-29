@@ -7,7 +7,9 @@ def openFileContent(filName, worldName):
      if os.path.isfile(path):    
         content= open(path,"r")
         data= content.readlines()
+
         count =0
+       
         for line in data:
                 arrline= line.split()
                 for worl in arrline:

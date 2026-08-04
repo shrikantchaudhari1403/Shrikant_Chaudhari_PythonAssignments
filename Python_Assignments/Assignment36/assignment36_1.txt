@@ -1,0 +1,251 @@
+1. Explain difference between model.fit() and model.predict()? Explain which one use for training and which one for testing?
+Ans=> Model.fit and model.predict are 2 important methods in machine leanring. they use for differenct purposes
+
+model.fit() -  it is use to train the model, it uses the labels (y), the learn from data
+               eg- model.fit(X_train, y_train)
+                  X_train = Input features
+                  y_train = Correct answers (labels)
+
+model.train() - it uses to make the prediction, called after training 
+
+   eg- model.predict() – Make predictions
+      After training, you use predict() to estimate outcomes for new, unseen data.
+      Example:
+        prediction = model.predict([[5]])
+        The model uses what it learned during fit().
+
+2. define the accuracy in ml and write formula for it ?
+Ans =>  accurancy is one of most common evaluation metrix in ml , how many predictions made my model were correct out of all predictions 
+
+                 no of corrrect predictions
+accurancy =    _______________________________
+                 total no of predictions     
+
+                        TP +TN
+in ML     Accurancy =  _______________________________
+                       FP+FN+TP+TN        
+
+3. if model predict 80 correct results out of 100 samples ? what is accuracy ? explain high accuracy good or bad?
+
+ans=> Accuracy   =     Correct Predictions  
+                    ____________________________    
+                     
+	​                    Total Predictions
+
+                             80
+                   =       _________  
+                             100
+
+	​
+
+                   =        0.80
+
+        Multiply by 100 to convert to a percentage:
+  
+         0.80×100=80%
+
+Answer: The model's accuracy is 80%.
+High accuracy is good
+
+4. Explain the concept of confusion metrix ? why it is more informative than accurancy ?
+ Ans-> The Confusion Matrix is one of the most important concepts in Machine Learning. It tells you not only how many predictions were correct, but also what kinds of mistakes the model made.
+
+ A Confusion Matrix is a table that compares the model's predictions with the actual (true) values.
+
+For a binary classification problem (Yes/No, Spam/Not Spam, Disease/No Disease), it looks like this:
+
+5. What is ball classification ? cricket vs Tenis
+
+
+          surface    weight        
+           
+cricket   rough      95 g          
+
+Tenis     soft      50  g         
+
+
+| Weight (g) | Surface | Actual Ball |
+| ---------- | ------- | ----------- |
+| 102        | Hard    | Cricket     |
+| 99         | Hard    | Cricket     |
+| 101        | Hard    | Cricket     |
+| 58         | Soft    | Tennis      |
+| 60         | Soft    | Tennis      |
+| 56         | Soft    | Tennis      |
+
+
+If weight ≈100g AND surface is hard
+      → Cricket Ball
+
+If weight ≈58g AND surface is soft
+      → Tennis Ball
+
+      | Ball | Actual  | Predicted |
+| ---- | ------- | --------- |
+| 1    | Cricket | Cricket ✅ |
+| 2    | Cricket | Cricket ✅ |
+| 3    | Cricket | Cricket ✅ |
+| 4    | Cricket | Tennis ❌  |
+| 5    | Cricket | Cricket ✅ |
+| 6    | Tennis  | Tennis ✅  |
+| 7    | Tennis  | Tennis ✅  |
+| 8    | Tennis  | Cricket ❌ |
+| 9    | Tennis  | Tennis ✅  |
+| 10   | Tennis  | Tennis ✅  |
+
+
+
+| Actual \ Predicted | Cricket    | Tennis     |
+| ------------------ | ---------- | ---------- |
+| **Cricket**        | **TP = 4** | **FN = 1** |
+| **Tennis**         | **FP = 1** | **TN = 4** |
+
+
+6. if tennis ball is predicted as cricket ball
+   2. False Positive (FP)
+
+   Actual = Tennis
+
+   Predicted = Cricket
+
+   Model wrongly says it is a cricket ball.
+
+   Example:
+
+   Weight = 70g
+   Surface = Slightly Hard
+
+   Actual = Tennis
+   Predicted = Cricket
+
+   FP = 1
+
+  7. In the confusion metrix 
+
+  | **Actual \ Predicted** | **Cricket** |  **Tennis** |
+| ---------------------- | ----------: | ----------: |
+| **Cricket**            | **40 (TP)** |  **5 (FN)** |
+| **Tennis**             |  **3 (FP)** | **52 (TN)** |
+
+calculate 1. model accurancy?
+  Total Samples
+Total Cricket balls = 40 + 5 = 45
+Total Tennis balls = 3 + 52 = 55
+Total Samples = 100
+Model Evaluation
+
+Accuracy
+ 
+                  TP+TN
+               ____________________________
+
+                 TP+TN+FP+FN
+
+	​=         40+52
+       _____________
+          40+52+3+5
+
+	​=      92 
+      _________
+ 
+      100
+
+	​=92%
+
+
+   2. total errors:
+
+     The errors are the incorrect predictions:
+
+False Positive (FP) = 3
+False Negative (FN) = 5
+Total Errors
+Total Errors=FP+FN=3+5=8
+
+✅ Total Errors = 8
+
+
+3. Total Correct Predictions
+
+Correct predictions are:
+
+True Positive (TP) = 40
+True Negative (TN) = 52
+
+So,
+
+Total Correct Predictions=TP+TN=40+52=92
+
+✅ Total Correct Predictions = 92
+
+
+8. what is difference between binary classification and multiclass classification :
+ans-> 1. Binary Classification
+
+         A binary classification model predicts only one of two possible classes.
+
+     2. Multiclass Classification
+
+        A multiclass classification model predicts one class from three or more classes.
+
+ 9. how confusion matrix changes in multiclass classification compare to binary classification ?
+
+ ans->Binary Classification Confusion Matrix
+  | Actual \ Predicted |     Cricket |      Tennis |
+| ------------------ | ----------: | ----------: |
+| **Cricket**        | **TP = 40** |  **FN = 5** |
+| **Tennis**         |  **FP = 3** | **TN = 52** |
+       
+
+       2. Multiclass Classification Confusion Matrix
+
+Now suppose the model classifies four types of balls:
+
+Cricket
+Tennis
+Football
+Basketball
+
+The confusion matrix becomes 4 × 4.
+
+| Actual \ Predicted | Cricket | Tennis | Football | Basketball |
+| ------------------ | ------: | -----: | -------: | ---------: |
+| **Cricket**        |  **38** |      2 |        0 |          0 |
+| **Tennis**         |       1 | **42** |        2 |          0 |
+| **Football**       |       0 |      1 |   **35** |          4 |
+| **Basketball**     |       1 |      0 |        2 |     **32** |
+
+
+10. . in iris dataset what is feature , label , why it is multiclass classification problem, how many possible output classes?
+
+ans-> Iris Dataset Overview
+
+The dataset contains measurements of iris flowers.
+
+Each row represents one flower.
+
+The goal is to predict the species of the flower based on its measurements.
+
+
+Label (Target Variable)
+
+The label is what we want the model to predict.
+
+In the Iris dataset, the label is
+
+Why is it a Multiclass Classification Problem?
+
+A binary classification problem has 2 possible output classes.
+
+Examples:
+
+Spam / Not Spam
+Cricket / Tennis
+
+The Iris dataset has 3 possible output classes.
+
+Setosa
+Versicolor
+Virginica
+
+Since the model chooses one of three classes, it is a multiclass classification problem.

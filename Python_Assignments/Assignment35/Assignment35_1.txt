@@ -1,0 +1,110 @@
+1. What machine learning ? and how is different from traditional rule based program ?
+
+=> Machine Learning (ML) is a way of teaching computers to learn from data and experience instead of writing explicit rules for every situation
+   Simple Example
+
+Imagine you want to identify whether an email is spam.
+
+Traditional Programming: You write hundreds of rules like "if email contains 'Win Money' then spam."
+Machine Learning: You provide thousands of emails already labeled as spam or not spam. The computer learns the patterns on its own and can classify new emails accurately.
+
+
+2. What is independent and dependent variables in machine leanring and from ball classification 
+   clearly identify a. Independent variable b. dependent variables
+=>  
+ An independent variable is the information you provide to the model so it can make a prediction.
+
+Also called:
+Features
+Input variables
+Predictors
+X 
+
+Dependent Variable (Output / Target / Label)
+
+The dependent variable is what you want the model to predict.
+
+Also called:
+Target
+Label
+Response variable
+Y
+
+Ball Case Study 
+          independent variable  dependent variables
+          surface  weight            
+Ball 1     rough     35 gm      tennis                                  
+Ball 2     soft      100 gm     cricket
+
+3. Explain difference between Features and lebels and are feature always numeric ?
+
+Ans-> Feature- input given to model called feature, they are also called independent variables 
+                these are observations that descrive data there are multiple fearures for given data 
+ 
+       Labels- Output the model predict also called as dependent variables  represents correct answer 
+                usally 1 level and or small sets in multioutput tasks
+
+       No. Features are not always numeric.
+
+4. what is supervied machine learning ? why is labelled data is always mandatory in superviewed leanring ?   
+Ans -> Supervised Machine Learning is a type of machine learning where the model learns from labeled data. It is called "supervised" because the model is trained using 
+        examples where the correct answer is already known, like a teacher supervising a student.  
+
+   Why is Labeled Data Mandatory?
+
+       Because the model needs to know the correct answer during training.
+       
+5. explain why we can not train and test model using same dataset ? what problem will occurs if we do so ?
+ans= > Because the model has already seen the training data. Testing it on the same data does not tell us how well it will perform on new, unseen data.
+       The purpose of testing is to measure how well the model generalizes,  not how well it remembers.
+  
+6. Explain purpose of splitting data into training and testing set what is industry stranded of split ?
+Ans-> The purpose of splitting the dataset is to ensure that the model learns
+      from one set of data and is evaluated on a different, unseen set of data.
+      Industry Standard-
+       Training Set (80%) , Testing Set (20%)
+
+7. explain meaning of following variables
+   x_train, x_test, y_train,y_test?
+
+Ans-> These four variables are created after splitting the dataset using train_test_split().
+      X_train - these are training Features
+      y_train - these are trainingLabels
+      The model compares X_train with y_train to learn the relationship.
+
+      X_test- these are testing Features
+      The model has never seen these during training.
+
+      y_test- These are the actual answers
+
+8. what is role of test_size=0.2 in train_test_split what happed if we change it to 0.5 ?
+Ans => In train_test_split(), the test_size parameter specifies what fraction of the dataset should be used for testing.
+
+ What Happens if test_size=0.5?
+
+Now half the data is used for testing.
+
+9. what is the purpose of random_state=42 in test_train_split() what happed if we not provide it ?
+Ans ->  When train_test_split() splits the dataset, it randomly selects which records go into the training set and which go into the test set.
+     What Happens If We Don't Provide random_state?
+
+  The dataset is still split randomly, but:
+
+  Every execution can produce a different train/test split.
+  Your model's accuracy may vary from run to run.
+  Reproducing results becomes difficult.
+
+10. what step by step internally happened when we use model.fit(x_train, y_train)?
+=>    model.fit(X_train, y_train) trains a machine learning model using the
+     training features and their corresponding labels. Internally,
+      the model receives the data, initializes its parameters,
+       makes predictions, compares those predictions with the actual labels using
+        a loss function, updates its parameters to reduce the error, and repeats this
+         process until it learns the relationship between the input features and the
+          target values. After training, the model can make predictions on unseen data.
+
+          
+
+
+   
+

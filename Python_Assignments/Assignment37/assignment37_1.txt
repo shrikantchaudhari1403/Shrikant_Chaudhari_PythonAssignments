@@ -1,0 +1,179 @@
+1. Define AI ? how it is different from traditional AI systems?
+Ans-> Artificial Intelligence (AI) is the field of computer science that focuses on creating systems capable of performing tasks that normally require human intelligence, such as:
+
+Learning from data
+Recognizing images and speech
+Understanding language
+Making decisions
+Solving problems
+Reasoning and planning
+
+| Traditional Software System                                      | AI System                                            |
+| ---------------------------------------------------------------- | ---------------------------------------------------- |
+| Follows explicitly programmed rules.                             | Learns patterns from data.                           |
+| Logic is written by developers.                                  | Learns decision-making through training.             |
+| Same input always gives the same output (if rules don't change). | Can improve predictions as it learns from more data. |
+| Works well for fixed, well-defined problems.                     | Handles complex or uncertain problems.               |
+| Cannot adapt on its own.                                         | Can adapt by retraining with new data.               |
+
+
+2.explain 3 types of AI based on capability ?
+ans-> 
+1. Artificial Narrow Intelligence (ANI) – Weak AI
+  ANI is designed to perform one specific task or a limited set of related tasks. It cannot perform tasks outside its trained domain.
+2. Artificial General Intelligence (AGI) – Strong AI
+  AGI refers to AI that can understand, learn, and perform any intellectual task that a human can do.
+3. Artificial Super Intelligence (ASI)
+   ASI is a hypothetical AI that would be more intelligent than humans in every field.
+
+3. is machine learning is part of AI or AI is part of ML explain with diagram
+-> Machine Learning (ML) is a part (subset) of Artificial Intelligence (AI).
+   It is not correct to say AI is part of Machine Learning.
+    
+                    Artificial Intelligence (AI)
+                 ┌────────────────────────────────┐
+                 │                                │
+                 │   Machine Learning (ML)        │
+                 │   ┌────────────────────────┐   │
+                 │   │                        │   │
+                 │   │     Deep Learning      │   │
+                 │   │        (DL)            │   │
+                 │   │   ┌────────────────┐   │   │
+                 │   │   │                │   │   │
+                 │   │   │ CNN, RNN,      │   │   │
+                 │   │   │ Transformers   │   │   │
+                 │   │   └────────────────┘   │   │
+                 │   └────────────────────────┘   │
+                 └────────────────────────────────┘
+
+4. Explain machine learning ? explain 3 types of ML?
+ans-> Machine Learning (ML) is a subset of Artificial Intelligence (AI) that enables computers to learn patterns from data and make predictions or decisions without being explicitly programmed for every rule.
+
+Three Types of Machine Learning
+
+Machine Learning is mainly divided into three types:
+
+Supervised Learning
+Unsupervised Learning
+Reinforcement Learning
+
+1. Supervised Learning
+In Supervised Learning, the model is trained using labeled data.
+A labeled dataset contains:
+Features (Inputs)
+Labels (Correct Outputs)
+ 
+
+2. Unsupervised Learning
+In Unsupervised Learning, the model is trained using unlabeled data.
+There are no correct answers provided. The algorithm tries to discover hidden patterns, relationships, or groups in the data.
+
+
+3. Reinforcement Learning
+In Reinforcement Learning (RL), an agent learns by interacting with an environment. It receives:
+Rewards for good actions
+Penalties for bad actions
+
+5. explain difference between supervised vs unsupervised ML based on data , output and real-world applications  ? 
+ans: The easiest way to understand the difference is this:
+
+Supervised Learning = The model learns from questions with correct answers (labeled data).
+Unsupervised Learning = The model learns from data without answers (unlabeled data) and tries to find hidden patterns.
+
+| Feature                       | Supervised Learning                          | Unsupervised Learning                         |
+| ----------------------------- | -------------------------------------------- | --------------------------------------------- |
+| **Training Data**             | Labeled data                                 | Unlabeled data                                |
+| **Knows the correct answer?** | ✅ Yes                                        | ❌ No                                          |
+| **Goal**                      | Predict output                               | Discover hidden patterns                      |
+| **Output**                    | Class or numerical value                     | Groups (clusters), associations, patterns     |
+| **Human labeling required?**  | Yes                                          | No                                            |
+| **Examples**                  | Email spam detection, House price prediction | Customer segmentation, Market basket analysis |
+
+
+6. What is reimforcement learnning ?
+ans->
+ Reinforcement Learning (RL) is a type of Machine Learning in which an agent learns by interacting with an environment. The agent takes actions, receives rewards or penalties, and gradually learns the best strategy (called a policy) to maximize the total reward.
+
+ 7. what is deep learning how it is different from traditional learning ?
+ Deep Learning (DL) is a subset of Machine Learning (ML) that uses Artificial Neural Networks (ANNs) with multiple hidden layers to automatically learn complex patterns from large amounts of data.
+
+ans-> It is called "deep" because the neural network contains many hidden layers between the input and output layers.
+
+| Feature                | Traditional Machine Learning                           | Deep Learning                                |
+| ---------------------- | ------------------------------------------------------ | -------------------------------------------- |
+| **Feature Extraction** | Manual                                                 | Automatic                                    |
+| **Data Requirement**   | Small to medium datasets                               | Very large datasets                          |
+| **Algorithm**          | Decision Tree, SVM, Random Forest, Logistic Regression | Deep Neural Networks (CNN, RNN, Transformer) |
+| **Human Effort**       | High                                                   | Low                                          |
+| **Training Time**      | Faster                                                 | Slower                                       |
+| **Hardware**           | CPU is often sufficient                                | GPUs/TPUs are usually needed                 |
+| **Performance**        | Good for structured/tabular data                       | Excellent for images, audio, text, and video |
+| **Accuracy**           | Good                                                   | Often higher with enough data                |
+
+8. explain Data science ? how it is different from machine learning ?
+ans->
+Definition
+
+Data Science is the field of extracting useful insights, knowledge, and predictions from structured and unstructured data using statistics, programming, machine learning, and data visualization.
+
+Simple Definition (Exam):
+Data Science is an interdisciplinary field that collects, cleans, analyzes, and interprets data to help organizations make better decisions.
+
+| Feature           | Data Science                                           | Machine Learning                                      |
+| ----------------- | ------------------------------------------------------ | ----------------------------------------------------- |
+| **Definition**    | Complete process of extracting knowledge from data     | A technique that enables computers to learn from data |
+| **Purpose**       | Analyze data and support decision-making               | Build predictive models                               |
+| **Scope**         | Very broad                                             | A subset of Data Science and AI                       |
+| **Includes**      | Data collection, cleaning, analysis, visualization, ML | Algorithms that learn patterns from data              |
+| **Output**        | Insights, reports, dashboards, predictions             | Predictions or classifications                        |
+| **Programming**   | Python, SQL, R                                         | Python, TensorFlow, Scikit-learn                      |
+| **Statistics**    | Extensive use                                          | Used but often focused on model training              |
+| **Visualization** | Major component                                        | Limited; usually evaluates model performance          |
+
+
+9. Explain the complete data science life cycle?
+ans-> The Data Science Life Cycle is a structured process used to solve real-world business problems using data. It covers everything from understanding the problem to deploying a solution and monitoring its performance.
+                Business Problem
+                       │
+                       ▼
+              1. Business Understanding
+                       │
+                       ▼
+               2. Data Collection
+                       │
+                       ▼
+            3. Data Cleaning & Preparation
+                       │
+                       ▼
+           4. Exploratory Data Analysis (EDA)
+                       │
+                       ▼
+               5. Feature Engineering
+                       │
+                       ▼
+             6. Model Building (ML/DL)
+                       │
+                       ▼
+              7. Model Evaluation
+                       │
+                       ▼
+          8. Deployment (Production)
+                       │
+                       ▼
+        9. Monitoring & Maintenance
+
+ 10. What is Generative AI (GenAI)? 
+ Generative AI (GenAI) is a branch of Artificial Intelligence that can create new content such as text, images, videos, music, code, and audio based on patterns learned from large amounts of training data.
+
+Unlike traditional AI, which mainly analyzes, classifies, or predicts, Generative AI creates something new.
+
+| Feature            | Traditional AI                                                                 | Generative AI                                                      |
+| ------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| **Purpose**        | Analyze, classify, predict, or automate                                        | Generate new content                                               |
+| **Output**         | Decision or prediction                                                         | New text, images, videos, audio, code                              |
+| **Learning Goal**  | Find patterns and make decisions                                               | Learn patterns and create new content                              |
+| **Examples**       | Spam detection, fraud detection, face recognition                              | ChatGPT, DALL·E, GitHub Copilot                                    |
+| **Typical Models** | Decision Trees, Random Forest, SVM, CNN (for recognition), Logistic Regression | Large Language Models (LLMs), Diffusion Models, GANs, Transformers |
+| **Input**          | Data                                                                           | Data + User prompt                                                 |
+| **Output Type**    | Fixed prediction or classification                                             | Creative, generated content                                        |
+

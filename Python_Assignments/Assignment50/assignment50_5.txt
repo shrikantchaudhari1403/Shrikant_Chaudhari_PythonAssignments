@@ -1,0 +1,6 @@
+Feature scaling , why it is required before training the model
+
+ans - scalling = X- mean/ Standard Deviation 
+
+large feature dominate the distance so scalling allied to nullyfy the dominancen of large feature values 
+

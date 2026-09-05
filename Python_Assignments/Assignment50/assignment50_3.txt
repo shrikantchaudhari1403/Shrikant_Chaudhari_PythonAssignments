@@ -1,0 +1,4 @@
+Q- Standard Deviation
+Ans- sqrt of variance
+
+- SD tell how much data varies aroud the mean 

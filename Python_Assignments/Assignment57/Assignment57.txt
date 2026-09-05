@@ -1,0 +1,198 @@
+Question1 - what is deep learing ? why it is consider as subset of machine learning ?
+Ans- > Deep Learning (DL) is a specialized part of Machine Learning (ML) that uses neural networks with multiple layers to learn patterns from data.
+    
+    Because Deep Learning follows the basic idea of Machine Learning:
+
+    Give data → train a model → model learns patterns → make predictions.
+
+    
+
+Question2 - differentiate Artifitial Inteligence , machine learing and deep learing with example ?
+Ans-> 
+                   ARTIFICIAL INTELLIGENCE (AI)
+        ┌─────────────────────────────────────────┐
+        │                                         │
+        │       MACHINE LEARNING (ML)             │
+        │    ┌─────────────────────────────┐      │
+        │    │                             │      │
+        │    │      DEEP LEARNING (DL)     │      │
+        │    │                             │      │
+        │    │   Neural Networks           │      │
+        │    │   CNN, RNN, Transformers    │      │
+        │    │                             │      │
+        │    └─────────────────────────────┘      │
+        │                                         │
+        │  Other AI: Rule-based systems, etc.    │
+        └─────────────────────────────────────────┘
+
+AI = Making machines behave intelligently.
+AI is the largest concept.
+For example, imagine a chess-playing computer.
+
+. Machine Learning (ML)
+
+ML = A machine learns patterns from data instead of being explicitly programmed for every rule.
+
+4. Deep Learning (DL)
+
+Deep Learning = Machine Learning using deep neural networks.
+
+Question3 - Explain difference between rule base system and learning base system ?
+Ans-> 1. Rule-Based System  
+In a rule-based system, a developer/expert explicitly defines what the system should do.
+
+2.Learning-Based System
+In a learning-based system, you give the computer historical data, and an ML algorithm learns patterns from it.
+
+Question4 - what is mean by training the model in deep learning?
+ans->Training a model means giving a neural network data and allowing it to adjust its internal weights so that its predictions become increasingly accurate.
+
+Think of it like teaching a student.
+
+Training Data
+     ↓
+Neural Network
+     ↓
+Prediction
+     ↓
+Compare with Actual Answer
+     ↓
+Calculate Error
+     ↓
+Adjust Weights
+     ↓
+Repeat many times
+     ↓
+Trained Model
+
+Question5- What is ANN explain wih block diagram ?
+Ans-> ANN = Artificial Neural Network.
+
+It is a machine-learning model inspired loosely by the way biological neurons process information. ANN is one of the fundamental concepts behind Deep Learning.
+
+       INPUT              HIDDEN LAYERS             OUTPUT
+
+     x₁ ────────┐       ┌─────────┐
+                ├──────►│ Neurons │──────┐
+     x₂ ────────┤       └─────────┘      │
+                │                         ▼
+     x₃ ────────┤       ┌─────────┐    ┌───────┐
+                ├──────►│ Neurons │───►│Output │──► Prediction
+     x₄ ────────┤       └─────────┘    └───────┘
+                │
+     x₅ ────────┘
+
+Question6- Why it is called nural network ? explain relaionship with human brain?
+Ans->      The name Neural Network comes from its inspiration from the human brain's network of neurons. But an ANN is not a literal copy of the brain—it is a mathematical/computational model inspired by some basic ideas from how neurons work.
+     
+       Dendrites
+      ↙    ↓    ↘
+   Signal Signal Signal
+          ↓
+     ┌─────────┐
+     │  Cell   │
+     │  Body   │
+     └────┬────┘
+          │
+       Axon
+          │
+          ▼
+     Next Neuron
+
+| Human Brain                  | Artificial Neural Network     |
+| ---------------------------- | ----------------------------- |
+| Biological neuron            | Artificial neuron             |
+| Dendrites receive signals    | Inputs                        |
+| Strength of connections      | Weights                       |
+| Neuron processes signals     | Mathematical calculation      |
+| Neuron fires                 | Activation/output             |
+| Network of neurons           | Network of artificial neurons |
+| Learning changes connections | Training changes weights      |
+
+Question7- Explain biological neurons and artifitial nurons comparison?
+Ans-> 
+1. Biological neuron 🧠
+
+A biological neuron is a cell in the nervous system that receives, processes, and transmits signals.
+
+A simplified structure:
+                 Biological Neuron
+
+   Dendrites
+   ↙   ↓   ↘
+  /    |    \
+Signal Signal Signal
+      ↓
+ ┌─────────────┐
+ │    Soma     │
+ │ (Cell Body) │
+ └──────┬──────┘
+        │
+       Axon
+        │
+        ▼
+    Axon Terminal
+        │
+        ▼
+   Next Neuron
+
+Artificial neuron 
+
+An artificial neuron is a mathematical function.
+             Artificial Neuron
+
+x₁ ── w₁ ──┐
+x₂ ── w₂ ──┤
+x₃ ── w₃ ──┤
+            ▼
+       Weighted Sum
+            +
+          Bias
+            │
+            ▼
+      Activation Function
+            │
+            ▼
+         Output
+
+Question8- What is neuron in ANN explain is function ?
+Ans->          A neuron is the basic building block of an Artificial Neural Network (ANN).
+
+
+takes inputs → applies weights → adds bias → applies an activation function → produces an output.
+                    ARTIFICIAL NEURON
+
+ x₁ ───── w₁ ────┐
+                  │
+ x₂ ───── w₂ ────┤
+                  ├──► Σ ──► + Bias ──► Activation ──► Output
+ x₃ ───── w₃ ────┤
+                  │
+ x₄ ───── w₄ ────┘
+
+       Inputs       Weighted Sum              Prediction
+
+Question9- what are weights in nural network ? why they are imporatant ?
+ans->  They are one of the most important parts of a neural network because the network learns by adjusting these weights during training.
+
+Think of a weight as an importance value.
+
+Question10-      what is bias in ANN? why it is required ?
+
+
+Bias is a learnable numerical value added to a neuron's weighted sum to give the neuron more flexibility in making decisions.
+
+A neuron basically calculates:
+
+Output = Activation(Weighted Sum + Bias)
+z = x₁w₁ + x₂w₂ + x₃w₃ + b
+
+
+
+
+
+
+
+
+
+

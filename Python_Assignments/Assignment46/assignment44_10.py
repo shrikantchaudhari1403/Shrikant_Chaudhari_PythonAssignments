@@ -9,7 +9,5 @@ df = pd.DataFrame({
         'english': [75, None, 82,62]
     })
 
-df['math']=df['math'].fillna(df['math'].mean())
-df['science']=df['science'].fillna(df['science'].mean())
-df['english']=df['english'].fillna(df['english'].mean())
+df=df.drop(columns=['english'], errors='ignore')
 print(df)

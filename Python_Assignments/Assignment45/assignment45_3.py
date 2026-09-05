@@ -1,4 +1,3 @@
-from sklearn.preprocessing import MinMaxScaler
 import pandas as pd
 
 def main():
@@ -8,11 +7,11 @@ def main():
               'science':[92,88,80],
               'english':[75,85,82]
          }) 
-      scaler = MinMaxScaler()
 
-      df[['math']]= scaler.fit_transform(df[['math']])
+      df['gender']=["male","male","fimale"]
 
-      print(df)
-      
+      avgMarks= df.groupby('gender')['name','math','science','english']
+      print(avgMarks)
+   
 if __name__=="__main__":
     main()

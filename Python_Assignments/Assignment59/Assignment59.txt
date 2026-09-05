@@ -1,0 +1,19 @@
+Quetion1- What is input layer explain its role in ANN ?
+Ans->
+The input layer is the first layer of an Artificial Neural Network (ANN).
+ Its main job is to receive the input data and pass it to the next layer for processing.
+  Role:
+  Role of the Input Layer
+Receives input data
+It accepts the features or values given to the neural network.
+Represents features
+Usually, one input neuron represents one feature of the data.
+Passes data forward
+The input layer generally does not perform complex calculations. It passes the input values to the hidden layer.
+Determines the number of inputs
+The number of input neurons depends on the number of features in the dataset.
+
+
+Quetion2: What is hidden layer ? why it is called hidden layer?
+Ans -> layer between input and output where trasformations occur 
+   

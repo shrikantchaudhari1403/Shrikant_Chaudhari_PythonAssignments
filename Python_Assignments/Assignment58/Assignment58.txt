@@ -1,0 +1,182 @@
+Question1 - Explain waighted sum in neural network?
+Ans- >
+Weighted Sum in a Neural Network
+
+A weighted sum is the first important calculation a neuron performs. It combines the input values with their corresponding weights to decide how strongly each input should influence the neuron.
+The formula is:
+
+$$ Z = (X_1W_1) + (X_2W_2) + (X_3W_3) + \cdots + b $$
+
+where:
+
+X₁, X₂, X₃ = input values
+W₁, W₂, W₃ = weights
+b = bias
+Z = weighted sum (also called the neuron's pre-activation value)
+
+
+Questions 2- Explain Forword propogation ? Explain step by step?
+ans->
+Forward propagation means passing input data from the input layer → hidden layer(s) → output layer to get a prediction.
+Think of it as the neural network's prediction process.
+
+Input Layer          Hidden Layer          Output Layer
+
+X1 ────────────────► ○
+                     │
+X2 ────────────────► ○ ────────────────► Prediction
+                     │
+X3 ────────────────► ○
+
+Question3 - explain backword prapogation ? why it is important ?
+Ans->
+Forward propagation makes a prediction. Backpropagation finds how the weights contributed to the error and tells the network how to change them.
+Forward propagation
+
+Input
+  ↓
+Hidden Layer
+  ↓
+Output
+  ↓
+Prediction
+  ↓
+Loss
+
+
+Backpropagation
+
+Loss
+  ↓
+Output Layer
+  ↓
+Hidden Layer
+  ↓
+Input Layer
+
+
+Question4- What is learning rate ? what happends if it is too high or too low ?
+Ans->
+The learning rate is a hyperparameter that controls how much the neural network changes its weights and biases during each training step.
+
+It is usually represented by α (alpha) or η (eta).
+
+The weight-update formula is:
+
+$$ \boxed{W_{new}=W_{old}-\alpha \times Gradient} $$
+
+Where:
+
+\(W_{old}\) = current weight
+\(\alpha\) = learning rate
+Gradient = direction and amount of error
+\(W_{new}\) = updated weight
+
+
+Question5- Explain perceptron ? its history and inventor ?
+Ans-> A Perceptron is one of the earliest and simplest models of an artificial neuron. It takes inputs, gives each input a weight, calculates a weighted sum, and produces an output.
+| Topic                 | Answer                                                   |
+| --------------------- | -------------------------------------------------------- |
+| What is a perceptron? | A simple artificial neuron/model                         |
+| Main inventor         | **Frank Rosenblatt**                                     |
+| Developed             | **1957–1958**                                            |
+| Demonstrated          | **Mark I Perceptron, 1958**                              |
+| Inputs                | Features                                                 |
+| Parameters            | Weights + bias                                           |
+| Original activation   | Threshold/step function                                  |
+| Output                | Typically 0 or 1                                         |
+| Major limitation      | Cannot solve non-linearly separable problems such as XOR |
+
+
+
+
+Question6- Explain structure of perceptron with inputs weights bias output ?
+Ans->
+
+A perceptron is basically a simple artificial neuron. It takes inputs, multiplies them by weights, adds a bias, and then uses an activation function to produce an output.
+
+                  WEIGHTS
+                W1     W2     W3
+                 ↓      ↓      ↓
+Input X1 ─────── × ─────┐
+                        │
+Input X2 ─────── × ─────┼──► Σ ──► + Bias ──► Activation ──► Output
+                        │
+Input X3 ─────── × ─────┘
+
+
+Question7- Draw and Explain the perceptron model ?
+Ans-> 
+
+Question 8- Explain perceptron formula?
+Ans-> 1. Weighted sum
+
+First, the perceptron multiplies every input by its corresponding weight:
+
+$$ z=x_1w_1+x_2w_2+x_3w_3+\cdots+x_nw_n+b $$
+
+Or simply:
+
+$$ \boxed{z=\sum_{i=1}^{n}x_iw_i+b} $$
+
+Where:
+
+\(x_i\) = input
+\(w_i\) = weight
+\(b\) = bias
+\(z\) = weighted sum / net input
+
+Question9- what is acivation fucation in peceptron?
+Ans->
+Activation function decides what output the perceptron should produce after calculating the weighted sum
+
+Inputs
+  ↓
+Multiply by Weights
+  ↓
+Weighted Sum + Bias
+  ↓
+      z
+  ↓
+Activation Function
+  ↓
+Output
+
+Question10- Differentiate single layer vs multilayer perceptron ?
+Ans->
+Single-Layer Perceptron
+A single-layer perceptron has no hidden layer.
+Input Layer              Output Layer
+
+ X1 ────────────────►
+                      │
+ X2 ────────────────► ● ───► Output
+                      │
+ X3 ────────────────►
+ 
+ formula-z=X1​W1​+X2​W2​+⋯+Xn​Wn​+b
+
+ A multilayer perceptron has one or more hidden layers between the input and output.
+ 
+Input Layer       Hidden Layer       Output Layer
+
+ X1 ──────────►    ● ──────────►
+                  ╱ ╲             │
+ X2 ──────────►  ●   ● ──────────►● ──► Output
+                  ╲ ╱             │
+ X3 ──────────►    ● ──────────►
+
+
+ z=∑x
+i
+	​
+
+w
+i
+	​
+
++b
+
+and then:
+
+output=f(z)

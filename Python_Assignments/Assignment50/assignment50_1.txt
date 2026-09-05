@@ -1,0 +1,12 @@
+1.Variance-
+Ans - formula
+
+(Sum(x-mean)) square
+_________________________
+ total number of observations
+
+in distance calculations large value dominates the small value to remove the dominance of large value 
+variance get calculated
+
+
+

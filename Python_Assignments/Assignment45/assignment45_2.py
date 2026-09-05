@@ -10,9 +10,11 @@ def main():
          }) 
       scaler = MinMaxScaler()
 
-      df[['math']]= scaler.fit_transform(df[['math']])
+      df['gender']=["male","male","fimale"]
+
+      df= pd.get_dummies(df,columns=['gender'], dtype=int)
 
       print(df)
-      
+   
 if __name__=="__main__":
     main()

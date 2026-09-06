@@ -1,0 +1,190 @@
+Question1- Explain Sigmoid activation function with graph ?
+Ans-> he Sigmoid function is an activation function used in Artificial Neural Networks (ANN).
+      It converts any input value into a value between 0 and 1.
+      [
+       \sigma(x)=\frac{1}{1+e^{-x}}
+      ]
+
+      Graph
+
+The sigmoid curve has an S-shaped form:
+When (x) is a large negative value, output approaches 0.
+When (x=0), output is 0.5.
+When (x) is a large positive value, output approaches 1.
+
+Question2: advantage and diadvantage of sigmoid function
+Ans-> 
+Advantages of Sigmoid Function
+Output between 0 and 1 – useful for binary classification and probability.
+Smooth function – small changes in input produce smooth changes in output.
+Differentiable – its derivative can be calculated easily, which is useful for backpropagation.
+Easy to understand – the S-shaped curve makes its behavior intuitive.
+
+Disadvantages of Sigmoid Function
+
+Vanishing gradient problem – for very large positive or negative inputs, the gradient becomes very small, slowing learning.
+Not zero-centered – outputs are always between 0 and 1, which can make optimization less efficient.
+Computationally expensive – it requires the exponential \(e^{-x}\) calculation.
+Slow learning for extreme values – when the input is very large or very small, the output gets close to 1 or 0 and learning becomes slow.
+
+
+Question3: Explain tanh activation function ?
+Ans- > 
+Tanh (Hyperbolic Tangent) is an activation function used in Artificial Neural Networks (ANNs)
+ and deep learning. It decides how strongly a neuron should be activated after calculating its weighted sum
+ tanh(x) = (e^x - e^(-x)) / (e^x + e^(-x))
+
+ Large positive input → output approaches +1
+ Input 0 → output 0
+ Large negative input → output approaches -1
+
+Question4-  Eplain RELU activation funcation?
+Ans-> 
+ ReLU stands for Rectified Linear Unit. It is one of the most commonly
+  used activation functions in neural networks, especially in hidden layers.
+  ReLU(x) = max(0, x)
+
+  Output
+  ↑
+  │              /
+  │             /
+  │            /
+  │           /
+  │          /
+  │_________/____________→ Input
+             0
+
+ReLU(-5) = max(0, -5)
+         = 0        
+
+Question5- Why ReLU is commonly used in hidden layer ?
+Ans->
+ReLU (Rectified Linear Unit) is one of the most commonly used activation functions
+ in the hidden layers of neural networks because it is simple, fast,
+  and helps neural networks learn complex patterns.
+  
+  If x > 0  → ReLU(x) = x
+  If x <= 0 → ReLU(x) = 0
+
+ ReLU only needs to check whether the value is positive:
+
+ Therefore, training can be much faster than using functions involving exponentials, such as sigmoid and tanh.
+
+ Question6- what is softmax activation function ?
+ Ans->
+ Softmax is an activation function mainly used in the output layer of a neural network for multi-class classification.
+
+                  Neural Network
+                       │
+                       ▼
+                ┌─────────────┐
+                │   Softmax   │
+                └──────┬──────┘
+                       │
+          ┌────────────┼────────────┐
+          ▼            ▼            ▼
+        Cat          Dog          Horse
+        0.10         0.70          0.20
+
+ Dog = 70% → highest probability → predicted class = Dog
+
+ Question7- explain softmax activation funcation ?
+ Ans->
+      softmax(z_i) = e^(z_i) / Σ e^(z_j)
+  Where:
+  z_i = score for a particular class
+  e = Euler's number ≈ 2.718
+  Σ = sum of exponentials of all class scores
+
+| Sigmoid                            | Softmax                        |
+| ---------------------------------- | ------------------------------ |
+| Usually binary classification      | Multi-class classification     |
+| Outputs probability independently  | Outputs probabilities together |
+| Example: Cat / Not Cat             | Cat / Dog / Horse              |
+| Outputs don't necessarily sum to 1 | Outputs sum to 1               |
+
+Question8- Why softmax use in multiclass classification ?
+Ans- > Softmax is used because it converts the neural network's raw output scores into probabilities for multiple classes.
+
+             Input Image
+                  │
+                  ▼
+          ┌──────────────┐
+          │ Neural Network│
+          └───────┬──────┘
+                  │
+          Raw Scores (Logits)
+          ┌───────┼───────┐
+          ▼       ▼       ▼
+        Cat      Dog     Horse
+         2        5        1
+                  │
+                  ▼
+             ┌─────────┐
+             │ SOFTMAX │
+             └────┬────┘
+                  │
+          ┌───────┼───────┐
+          ▼       ▼       ▼
+        4.2%    93.6%    2.2%
+          │       │       │
+          └───────┼───────┘
+                  ▼
+             🐕 DOG
+
+Question9- 
+which activation funcation commanly used in binary classification output layer?
+Ans->
+Sigmoid activation function is most commonly used in the output layer for binary classification
+
+             INPUT
+               │
+               ▼
+        ┌──────────────┐
+        │ Hidden Layers │
+        └──────┬───────┘
+               │
+               ▼
+        ┌──────────────┐
+        │   SIGMOID    │
+        │  Activation  │
+        └──────┬───────┘
+               │
+               ▼
+          OUTPUT
+        Probability
+          0 to 1
+               │
+        ┌──────┴──────┐
+        ▼             ▼
+     < 0.5          ≥ 0.5
+        │             │
+        ▼             ▼
+      Class 0       Class 1
+
+Question10- which activation funcation is mostly used in multiclass classification output layer?
+Ans- >
+Softmax activation function is most commonly used in the output layer of a multiclass classification neural network.
+
+                 INPUT
+                   │
+                   ▼
+          ┌────────────────┐
+          │  Hidden Layers │
+          │      ReLU      │
+          └───────┬────────┘
+                  │
+                  ▼
+          ┌────────────────┐
+          │    SOFTMAX     │
+          │   Activation   │
+          └───────┬────────┘
+                  │
+        ┌─────────┼─────────┐
+        ▼         ▼         ▼
+       Cat       Dog      Horse
+      10%        80%        10%
+                  │
+                  ▼
+             🐕 DOG
+          Highest probability

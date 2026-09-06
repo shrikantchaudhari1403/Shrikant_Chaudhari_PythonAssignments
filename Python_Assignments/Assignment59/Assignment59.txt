@@ -16,4 +16,58 @@ The number of input neurons depends on the number of features in the dataset.
 
 Quetion2: What is hidden layer ? why it is called hidden layer?
 Ans -> layer between input and output where trasformations occur 
+   why it is called hidden layer:
+   1. Receives values from the previous layer.
+   A hidden layer is an intermediate layer of neurons that transforms input data and learns patterns before passing the information to the output layer. 
+
+Quetion3: what is output layer?  what is its purpose ?
+Answer: The output layer is the last layer of an Artificial Neural Network (ANN). Its main purpose is to produce the final result or prediction of the network.
+The output layer takes the information processed by the hidden layers and converts it into the final answer.
+For example, if we want to predict whether a student will pass or fail:
+
+Quetion4: Why hidden layer is important in deep learning ?
+Ans-> The hidden layer is very important because it allows a neural network to learn patterns and relationships from the input data.
+A deep learning model usually has many hidden layers:
+It helps learn complex relationships
+
+Quetion5: how many hidden layers make the network deep ?
+Ans -> A neural network is called deep when it has more than one hidden layer.
+
+Quetion6: what operations happend in input layer
+Ans->  In an Artificial Neural Network (ANN),
+ the input layer is the first layer that receives the raw data.
+  Unlike hidden layers, it does not learn patterns or 
+  perform complex calculations. 
+  Its main job is to accept the input features and pass them to the hidden layer.
+
+
+Quetion7: What operations happed in hidden layer ?
+Ans-> The hidden layer performs the main mathematical processing in an ANN.
+      It takes inputs from the previous layer,applies weights and bias, then uses an activation function to produce an output.
+
+Quetion8: What happens in output layer during prediction ?
+During prediction, the output layer takes the values produced by the final hidden layer and converts them into the final prediction/result.
+The output layer doesn't normally learn during the prediction itself. The weights and biases were learned during training. During prediction, the model uses those learned parameters to calculate the result.
+
+Quetion9: Draw a ANN having 3 input neutron, 2 hidden neutron ,1 output neutron ?
    
+ x1 ─────────┐
+             ├────► h1 ─────┐
+ x2 ─────────┤              │
+             │              ├────► y
+ x3 ─────────┼────► h2 ─────┘
+             │
+
+Question 10 : can neural network work without hidden layer explain with example?
+
+Yes. A neural network can work without a hidden layer. It is called a single-layer neural network or, in the simplest case, a perceptron.
+
+| x1 | x2 | Output |
+| -: | -: | -----: |
+|  0 |  0 |      0 |
+|  0 |  1 |      0 |
+|  1 |  0 |      0 |
+|  1 |  1 |      1 |
+
+A network without a hidden layer can learn only relatively simple, linearly separable problems
+

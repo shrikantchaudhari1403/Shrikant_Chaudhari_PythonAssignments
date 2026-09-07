@@ -1,0 +1,159 @@
+Question1- What is FNN (feed forward network) ? explain it architeture ?
+Answer-> 
+Data moves only in one direction → Input → Hidden Layer(s) → Output
+        4          3          2          1
+     INPUT      HIDDEN 1    HIDDEN 2   OUTPUT
+
+       ● ───────► ● ───────► ● ───────► ●
+       ● ───────► ● ───────► ●
+       ● ───────► ●
+       ● ───────►
+  Every neuron in one layer connects to every neuron in the next layer
+
+Question2- why it is called feedforward network ?        
+Answer->
+It is called a Feedforward Neural Network (FNN) because the information feeds forward in only one direction through the network.
+
+Question3 -Explain working steps of fnn from input to output?
+Answer->
+step1 :
+Give input to the network
+Suppose we have 4 inputs:
+we have 2 hidden layers with 3 and 2 nurons 
+
+step2:
+              FORWARD PASS
+
+Input
+  │
+  │  X1, X2, X3, X4
+  ↓
+┌─────────────────────┐
+│    Hidden Layer 1   │
+│      H1 H2 H3       │
+│                     │
+│ Weighted Sum        │
+│        ↓            │
+│ Activation (ReLU)   │
+└─────────┬───────────┘
+          │
+          ↓
+┌─────────────────────┐
+│    Hidden Layer 2   │
+│       H4 H5         │
+│                     │
+│ Weighted Sum        │
+│        ↓            │
+│ Activation (ReLU)   │
+└─────────┬───────────┘
+          │
+          ↓
+┌─────────────────────┐
+│    Output Layer     │
+│         Y           │
+│                     │
+│ Weighted Sum        │
+│        ↓            │
+│ Activation          │
+└─────────┬───────────┘
+          │
+          ↓
+      Prediction 
+
+Question4: Explain mean square root error with example ?
+Answer->
+Mean Squared Error (MSE) is the most common loss function for regression models.
+It measures how far the model's predictions are from the actual values.
+
+MSE = (1/n) * Σ(yᵢ - ŷᵢ)²
+
+Example:
+
+Actual values    = [10, 20, 30]
+Predicted values = [12, 18, 25]
+
+Step 1: Calculate errors
+
+(10 - 12) = -2
+(20 - 18) =  2
+(30 - 25) =  5
+
+Step 2: Square the errors
+
+(-2)² = 4
+( 2)² = 4
+( 5)² = 25
+
+Step 3: Calculate MSE
+
+MSE = [4 + 4 + 25] / 3
+
+MSE = 33 / 3
+
+MSE = 11
+
+Therefore, MSE = 11
+
+Question5- what is binary cross entropy loss function ?
+Answer ->
+Binary Cross-Entropy is a loss function used for binary classification,
+where there are only 2 possible classes.
+
+Spam      → 1
+Not Spam  → 0
+
+Pass      → 1
+Fail      → 0
+
+Disease   → 1
+No Disease → 0
+
+Question6 - what is optimizer in deep learning?
+Answer->
+   optimizer is an algorithm that updates the weights 
+   and biases of a neural network to reduce the loss/error.
+
+Input
+  ↓
+Neural Network
+  ↓
+Prediction
+  ↓
+Loss Function
+  ↓
+"How wrong is the prediction?"
+  ↓
+Optimizer
+  ↓
+Update Weights & Biases
+  ↓
+Better Prediction
+
+Question7 - what is epoch in nural network training
+Answer-> 1 Epoch = Entire training dataset processed once
+An epoch is the complete journey through the training dataset.
+
+Question8- Explain difference between epoch, batch size and iteration in nural network ?
+Answer - eg- 
+Total training data = 1,000 images
+Batch size = 100
+Epochs = 5
+
+Batch size = how many training examples the network processes at one time
+Iteration = one batch is processed and the model's weights are updated once.
+Epoch = the entire training dataset has been processed once.
+
+Question9 - what is cnn why it is popular in image processing ?
+Answer->
+CNN is a type of deep neural network specially designed to work with grid-like data, especially images.
+It is very popular in image processing because CNN can automatically learn important visual features such as
+
+Edges → Corners → Shapes → Textures → Objects
+
+Question10- why cnn is perform good in image data than ann ?
+Answer- >
+  CNN generally performs better than a basic ANN/FNN on image data because CNN is designed to understand the spatial structure of images,
+  while a normal ANN does not naturally exploit it.
+
+
+
